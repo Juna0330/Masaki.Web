@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex,nofollow">
+	<title>レスポンシブヘッダー</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="style.css">
+
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script>
+		$(function() {
+			const hum = $('#hamburger, .close')
+			const nav = $('.sp-nav')
+			hum.on('click', function(){
+				nav.toggleClass('toggle');
+			});
+		});
+	  </script>
+</head>
+<body>
+	<header id="header">
+		<h1 class="slide-left show">
+			<a href="/">RICO NOTES</a>
+		</h1>
+		<nav class="pc-nav slide-right show">
+			<ul>
+				<li><a href="#">ABOUT</a></li>
+				<li><a href="#">SERVICE</a></li>
+				<li><a href="#">COMPANY</a></li>
+				<li><a href="#">CONTACT</a></li>
+			</ul>
+		</nav>
+		<nav class="sp-nav">
+			<ul>
+				<li><a href="#">ABOUT</a></li>
+				<li><a href="#">SERVICE</a></li>
+				<li><a href="#">COMPANY</a></li>
+				<li><a href="#">CONTACT</a></li>
+				<li class="close"><span>閉じる</span></li>
+			</ul>
+		</nav>
+		<div id="hamburger" class="slide-right show">
+			<span></span>
+		</div>
+	</header>
+	<div class="main-visual">
+		<div class="slide-bottom show">
+			<h2>WEB DESIGN <span>IS</span> YOUR FUTURE</h2>
+			<a href="" class="button">download</a>
+		</div>
+	</div>
+
+	<section id="about">
+		<h2 class="slide-bottom show">ABOUT<span></span></h2>
+		<p class="slide-bottom show">フェードインのサンプルです。<br>CSSとjQueryを使っています。</p>
+	</section>
+	<section id="service">
+		<h2 class="slide-bottom show">SERVICE<span></span></h2>
+		<div>
+			<div class="icon_list">
+				<ul class="flex">
+					<li class="slide-left show"><img src="icon_hearing.png" alt="テキスト"><p>テキスト</p></li>
+					<li class="slide-left show"><img src="icon_marketing.png" alt="テキスト"><p>テキスト</p></li>
+					<li class="slide-left  show"><img src="icon_planning.png" alt="テキスト"><p>テキスト</p></li>
+					<li class="slide-left  show"><img src="icon_support.png" alt="テキスト"><p>テキスト</p></li>
+				</ul>
+			</div>
+			<p class="slide-right show">transition-delayで時差表示</p>
+			<div class="slide-bottom show"><a href="#" class="button">ABOUT DETAIL</a></div>
+		</div>
+	</section>
+	<footer>
+		<small>footer</small>
+	</footer>	
+<script>
+	//フェードイン用のコードです
+	$(function(){
+		$(window).on('load scroll', function() {
+			$(".show").each(function() {
+				var winScroll = $(window).scrollTop();
+				var winHeight = $(window).height();
+				var scrollPos = winScroll + (winHeight * 0.9);
+				if($(this).offset().top < scrollPos) {
+					$(this).css({opacity: 1, transform: 'translate(0, 0)'});
+				}
+			});
+		});
+	});
+	//フェードイン用のコードはここまでです
+
+	//ヘッダーの高さと背景色の変更
+	$(function () {
+		const header = $('#header');
+		$(window).on('load scroll' ,function () {
+			var headerHeight = header.innerHeight();
+
+			$(window).on('scroll' ,function () {
+				if ( $(this).scrollTop() > 100 ) {
+					header.addClass('min-header');
+				} else {
+					header.removeClass('min-header');
+				}
+			});
+		});
+});
+</script>	
+</body>
+</html>
