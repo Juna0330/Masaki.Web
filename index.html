@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale-1.0">
+  <meta charset="UTF-8">
+  <title>Personal Portfolio | Responsive Website Design</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script>
+		$(function() {
+			const hum = $('#hamburger, .close')
+			const nav = $('.sp-nav')
+			hum.on('click', function(){
+				nav.toggleClass('toggle');
+			});
+		});
+	  </script>
+  <script>
+$(function() {
+  var winH = $(window).height();
+  $('#wrap').css('display','none');
+  $('#loader').height(winH).css('display','block');
+});
+
+function stopload() {
+  $('#wrap').css('display','block');
+  $('#loader').delay(600).fadeOut(500);
+}
+
+//読み込み完了で実行
+$(window).on('load', function() {
+  stopload();
+});
+  
+//10秒経過でロード画面強制非表示
+$(function(){
+  setTimeout('stopload()',10000);
+});
+</script>
+ </head>
+<body>
+  <div id="loader">
+ <div class="spinner"></div>
+</div><!-- //#loader -->
+  <div id="wrap">
+  <header>
+   <h1 class="slide-left show">
+  <a href="#" class="logo">Portfolio</a>
+     </h1>
+    
+    <div class="toggle" onclick="toggleMenu();"></div>
+ 
+    <ul class="menu">
+   
+    <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+      <li><a href="#about" onclick="toggleMenu();">About</a></li>
+      <li><a href="#services" onclick="toggleMenu();">Langrage Used</a></li>
+      <li><a href="#work" onclick="toggleMenu();">Work</a></li>
+        <li><a href="#testimonial" onclick="toggleMenu();">Testimonial</a></li>
+        <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+
+    </ul>
+    
+  </header>
+  <section class="banner" id="home">
+  <div class="textBx">
+    <h2 class="slide-bottom show"> Hello,I'm<br><span> MASAKI OHNARA.</span> </h2>
+    <h3 class="fade-in-bottom">I'm a Front End Web Developer.</h3>
+    <a href="#about" class="btn" >About Me</a>
+    </div>
+  </section>
+  <section class="about" id="about">
+  <div class="heading">
+    <h2 class="slide-bottom show">About Me</h2>
+    </div>
+    <div class="content">
+      <div class="contentBx w50">
+        <h3 class="slide-bottom show">I'm a Front End Web Developer.</h3>
+        <p class="slide-bottom show">
+東京コミュニケーションアート専門学校 ゲームプログラマー科在学
+<br>2022年3月卒業予定
+<br>大楢　真樹（オオナラ　マサキ）
+生年月日/2001年 3 月30日　出身/茨城県
+
+<br>使用ソフト: Unity,VisualStudio,Adobe PhotoShop,Adobe Dreamweaver
+<br>使用ツール: Slack,SourceTree,Github 　
+<br>希望職種　:
+<br>趣味: 読書　酒　Youtube鑑賞　映画鑑賞
+<br>好きなゲーム：
+        
+        
+        </p>
+      </div>
+      <div class="slide-bottom show">
+      <img src="marii.png" class="img" >
+      </div>
+    </div>
+  </section>
+  <section class="services" id="services">
+    <div class="heading white">
+   <h2 class="slide-bottom show">Language Used</h2>
+    <p class="slide-bottom show"> Lorem ipsum dolor sit amet,consectetur adipisicing elit.</p>
+      </div>
+          <div class="slide-bottom show">
+    <div class=   "content">
+     
+    <div class="servicesBx">
+      <img src="csharp-logo.png">
+      <h2>C#</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+       <div class="servicesBx">
+      <img src="html-5.png">
+      <h2>HTML5</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+       <div class="servicesBx">
+      <img src="css3%20(1).png">
+      <h2>CSS3</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+       <div class="servicesBx">
+      <img src="c-59-1175248%20(1).png">
+      <h2>C</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+       <div class="servicesBx">
+      <img src="1200px-PHP-logo.svg%20(1).png">
+      <h2>Content Writing</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+       <div class="servicesBx">
+      <img src="javascript.png">
+      <h2>Video Editing</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+    </div>
+  </section>
+  <section class="work" id="work">
+    <div class="heading ">
+   <h2> Work</h2>
+    <p> Lorem ipsum dolor sit amet,consectetur adipisicing elit.</p>
+      </div>
+    <div class="content">
+    <div class="workBx">
+      <img src="comingsoon-1%20(2)%20(1).png">
+      </div>
+        <div class="workBx">
+      <img src="comingsoon-1%20(2)%20(1).png">
+      </div>
+        <div class="workBx">
+      <img src="comingsoon-1%20(2)%20(1).png">
+      </div>
+        <div class="workBx">
+      <img src="comingsoon-1%20(2)%20(1).png">
+      </div>
+    </div> <div class="heading ">
+   <a href="#" class="btn">View More
+    </a>
+      </div>
+  </section>
+  <section class="testimonia1" id="testimonial">
+     <div class="heading">
+   <h2>Testimonia1</h2>
+    <p> Lorem ipsum dolor sit amet,consectetur adipisicing elit.</p>
+      </div>
+    <div class="content">
+      <div class="testimonia1Bx">
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing slit, sed do eiusmod
+          tempor incididunt ut labore et dolore manga aliua. UT enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
+        
+        </p>
+        <h3>Someone Famous<br><span>Creative Designer</span></h3>
+      </div>
+       <div class="testimonia1Bx">
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing slit, sed do eiusmod
+          tempor incididunt ut labore et dolore manga aliua. UT enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
+        </p>
+        <h3>Someone Famous<br><span>Creative Designer</span></h3>
+      </div>
+    </div>
+  </section>
+  
+  <section class="contact" id="contact">
+    <div class="heading white">
+    <h2>Contact Us</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+    <div class="content">
+    <div class="contactInfo">
+    <h3>Contact Form</h3> 
+      <div class="contactInfoBx">
+        <div class="box">
+          <div class="icon">
+          <i class="fa fa-map-marker"></i>
+          </div>
+        <div class="text">
+                    <h3>Address</h3>
+          <p>4671 Sugar Camp Road,<br>Owatonna,Minnesota,<br>55060</p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="icon">
+          <i class="fa fa-phone"></i>
+        </div>
+        <div class="text">
+          <h3>Phone</h3>
+          <p>070-4136-5451</p>
+          </div>
+        </div>
+      
+         <div class="box">
+           <div class="icon">
+             <i class="fa fa-envelope-o"></i>
+           </div>
+        <div class="text">
+          <h3>Email</h3>
+          <p>ottoaizu330@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="formBx">
+      <form id="contact-form" method="post" action=" https://docs.google.com/forms/u/1/d/e/1FAIpQLSeCLZZisNiavWQ9MAgYIU_Ct3sJQY6rLaplsDl3XTLy00ONEQ/formResponse">
+		
+        <h3>Message Me</h3>
+       <div class="flex-box"> <input type="text" name="entry.366340186" placeholder="Full Name">
+		  </div>
+         <div class="flex-box">  <input type="email" name="entry.289542785" placeholder="Email">
+		  </div>
+        <div class="box">
+		  <textarea name="entry.487174825" placeholder="coment"></textarea>
+			</div>
+           <input type="submit" value="Send" class="submit-btn">
+        </form>
+		  <p class="end-message">お問い合わせありがとうございました</p>
+		  <p class="false-message">送信失敗です</p>
+      </div>
+		 <script src="http:s//ajax.gogleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      </div>
+    
+	 
+    
+    </section>
+  <div class="copyright">
+  <p>Copright 0  2020 Online tutorials.All Right Reserved</p>
+  </div>
+  </div>
+  <script type="text/javascript">
+  window.addEventListener('scroll',function(){
+    var header =document.querySelector('header');
+    header.classList.toggle('sticky',window.scrollY>0);
+  });
+    
+    function toggleMenu(){
+      var menuToggle =document.querySelector('.toggle');
+        var menu =document.querySelector('.menu');
+      menuToggle.classList.toggle('active')
+        menu.classList.toggle('active')
+    }
+    	//フェードイン用のコードです
+	$(function(){
+		$(window).on('load scroll', function() {
+			$(".show").each(function() {
+				var winScroll = $(window).scrollTop();
+				var winHeight = $(window).height();
+				var scrollPos = winScroll + (winHeight * 0.9);
+				if($(this).offset().top < scrollPos) {
+					$(this).css({opacity: 1, transform: 'translate(0, 0)'});
+				}
+			});
+		});
+	});
+	//フェードイン用のコードはここまでです
+  </script>
+	<script type="text/javascript" src="contact.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  
+  </body>
+</html>
